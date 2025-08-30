@@ -1,46 +1,40 @@
-# Aptitrack  
+# 📘 AptiTrack – Aptitude Tracker & Progress Dashboard  
 
-## 📌 Description  
-**Aptitrack** is a full-stack aptitude preparation and tracking platform.  
-It helps students practice aptitude questions, track their progress, and improve their performance step by step.  
-
-✨ Key Features:  
-- 🎯 Attend aptitude **quizzes** by topic & difficulty level  
-- 📊 Track **stage-wise progress** (Easy → Medium → Hard)  
-- 🤖 Get **AI-powered explanations** (using **Ollama model**) for wrong answers  
-- 📝 Review all attempted questions with detailed solutions  
-- 📈 Personalized **performance dashboard** with accuracy, progress & topic-wise analysis  
+**AptiTrack** is a full-stack aptitude preparation and tracking platform that helps users monitor their performance across various topics, attempt smart quizzes, and visualize progress over time.  
+It is designed for students and job seekers aiming to improve aptitude skills with measurable insights and AI-powered explanations.  
 
 ---
 
 ## 🚀 Features  
-- User Authentication (Register/Login)  
-- Attempt Quizzes with Timer  
-- Instant Results with Correct/Incorrect Marking  
-- AI-powered Explanations for Wrong Questions (via Ollama)  
-- Stage-wise Unlocking Based on Performance  
-- Performance Dashboard with Charts  
-- Admin Panel (Add/Edit/Delete Questions)  
+
+- 🔐 **User Authentication** (JWT-based login and secure routes)  
+- 🧮 **Topic-Wise Practice** – Curated questions with topic & difficulty filters  
+- ⏱️ **Timed Quizzes** – Interactive multi-question quizzes with navigation  
+- 📊 **Visual Analytics**:  
+  - Topic-wise scores (Bar Chart)  
+  - Accuracy Summary (Pie Chart)  
+  - Daily Quiz Attempts (Area Chart)  
+  - Average Time Taken per quiz  
+- 📂 **Date & Topic Filters** – Drill down your stats with flexible filters 
+- 🤖 **AI-Powered Explanations** – Wrong answers are explained using **Ollama model**  
+- 👤 **User-specific Data** – Each user sees only their own progress & insights  
 
 ---
 
 ## 🛠️ Tech Stack  
 
-### **Frontend**  
-- React (Create React App)  
-- React-Bootstrap (UI components)  
-- Axios (API calls)  
-- Recharts / Chart.js (data visualization)  
+### 🎨 Frontend  
+- **React.js**  
+- **Recharts** (for data visualizations)  
+- **Bootstrap + Custom CSS** (for styling and responsive UI)  
+- **html2pdf.js** (for PDF export of analytics)  
 
-### **Backend**  
-- Node.js  
-- Express.js  
-- JWT Authentication  
+### ⚙️ Backend  
+- **Node.js + Express.js**  
+- **MongoDB Atlas** (cloud database)  
+- **JWT** for secure authentication  
+- **CORS**, **bcryptjs**, **dotenv** for API security & environment handling  
 
-### **Database**  
-- MongoDB (Mongoose ORM)  
-
-### **AI Integration**  
-- **Ollama Model** for generating explanations of wrong answers  
-
+### 🤖 AI Integration  
+- **Ollama Model** – Provides natural language explanations for wrong quiz answers  
 
