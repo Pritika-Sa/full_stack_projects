@@ -21,7 +21,7 @@ It is designed for students and job seekers aiming to improve aptitude skills wi
 
 ---
 
-## 🛠Tech Stack  
+## Tech Stack  
 
 ### Frontend  
 - **React.js**  
