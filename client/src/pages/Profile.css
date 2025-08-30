@@ -1,0 +1,131 @@
+/* Background with subtle dotted pattern + soft gradient */
+.profile-bg {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 15px;
+}
+
+/* Main Profile Card */
+.profile-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeUp 0.6s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar */
+.profile-avatar {
+  color: #059669 !important;
+  filter: drop-shadow(0 3px 6px rgba(16, 185, 129, 0.3));
+}
+
+/* Section Inner Cards */
+.inner-card {
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.inner-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::before {
+  content: "▍";
+  color: #10b981;
+  font-size: 20px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 20px !important;
+  }
+  .section-title {
+    font-size: 16px;
+  }
+}
+/* Back Button */
+.back-btn {
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #10b981 !important;
+  color: #fff !important;
+  border: none;
+}
+/* Save Button */
+.save-btn,
+.back-btn {
+  padding: 12px 28px;   /* same size */
+  border-radius: 12px;  /* same rounded corners */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+/* Save Button Styling */
+.save-btn {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border: none;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #059669, #047857) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
+}
+
+/* Back Button Styling */
+.back-btn {
+  background: #6c757d;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.back-btn:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}

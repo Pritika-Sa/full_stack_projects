@@ -1,0 +1,133 @@
+/* Just reuse Register.css as is for alignment */
+.login-wrapper, .register-wrapper { /* reuse same wrapper */
+  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.register-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #3f51b5, transparent);
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.register-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #283593, transparent);
+  bottom: -50px;
+  right: -50px;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Floating Card */
+.register-card {
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  margin: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.register-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Left illustration panel */
+.register-left {
+  background: linear-gradient(180deg, #e8eaf6, #c5cae9);
+  border-radius: 20px 0 0 20px;
+  min-height: 100%;
+}
+
+/* Form Controls */
+.form-control-custom {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-control-custom:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 10px rgba(63, 81, 181, 0.3);
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.register-btn {
+  background: linear-gradient(135deg, #3f51b5, #283593);
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #3949ab, #1a237e);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(63, 81, 181, 0.3);
+}
+
+/* Links */
+.register-card a {
+  color: #3949ab;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .register-left {
+    display: none;
+  }
+  .register-card {
+    border-radius: 20px;
+    padding: 20px;
+  }
+}
+/* Position eye icon inside input */
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #3f51b5;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.password-toggle-icon:hover {
+  color: #1a237e;
+}

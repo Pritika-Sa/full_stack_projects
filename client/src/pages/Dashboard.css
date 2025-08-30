@@ -1,0 +1,278 @@
+/* Dashboard.css */
+
+.modern-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafc;
+  color: #222;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-pattern {
+  background-image: radial-gradient(rgba(45, 108, 223, 0.15) 1px, transparent 1px);
+  background-size: 18px 18px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* === Top Bar === */
+.top-bar {
+  z-index: 10;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
+}
+
+/* User chip */
+.user-chip {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.85); /* semi-transparent */
+  border-radius: 30px;
+  border: 1px solid #e0e0e0;
+  padding: 0.4rem 0.8rem;
+  transition: 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dotted pattern behind avatar & chip */
+.user-chip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(45,108,223,0.12) 1px, transparent 1px);
+  background-size: 12px 12px;
+  z-index: 0;
+  border-radius: 30px;
+}
+
+.user-chip:hover {
+  border-color: black;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin-right: 8px;
+  z-index: 1; /* above pattern */
+}
+
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  z-index: 1;
+}
+
+/* Sign out button */
+.signout-btn {
+  background: black;
+  border: none;
+  color: #fff;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.signout-btn:hover {
+  background: grey;
+}
+
+/* === Hero Section === */
+.dashboard-shell {
+  z-index: 5;
+  flex: 1;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: #e9f0ff;
+  color: #2d6cdf;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d0dcff;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.hero-text {
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.primary-btn {
+  background: #2d6cdf;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #1e54b7;
+}
+
+.ghost-btn {
+  background: transparent;
+  border: 1px solid #2d6cdf;
+  color: #2d6cdf;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ghost-btn:hover {
+  background: #f0f6ff;
+}
+
+/* === Feature Cards === */
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent */
+  border: 1px solid #eaeaea;
+  padding: 1.5rem;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 280px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dotted pattern overlay for cards */
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(45, 108, 223, 0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+  z-index: 0;
+  border-radius: 14px;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: #2d6cdf;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card.is-highlighted {
+  border: 1px solid #2d6cdf;
+  background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(245,249,255,0.85) 100%);
+}
+
+.icon-box {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #2d6cdf;
+  z-index: 1;
+}
+
+.feature-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #222;
+  z-index: 1;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #666;
+  z-index: 1;
+}
+
+/* staggered effect */
+.feature-card:nth-child(1) { animation-delay: 0.2s; }
+.feature-card:nth-child(2) { animation-delay: 0.4s; }
+.feature-card:nth-child(3) { animation-delay: 0.6s; }
+.feature-card:nth-child(4) { animation-delay: 0.8s; }
+
+/* Footer */
+.footer {
+  background: transparent;
+  color: #777;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  border: none;
+  box-shadow: none;
+}
+
+/* === Animations === */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

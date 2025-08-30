@@ -1,0 +1,96 @@
+/* ===============================
+   🌐 Global Styles for AptiTrack
+   =============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #6aa2ff;
+  --success-color: #34d399;
+  --warning-color: #facc15;
+  --danger-color: #f87171;
+  --light-bg: #f7fafc;
+  --dark-text: #1f2937;
+  --gray-text: #6b7280;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --border-radius: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+  border-radius: var(--border-radius);
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  border-color: var(--warning-color);
+  border-radius: var(--border-radius);
+  color: #000;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+  border-radius: var(--border-radius);
+}
+
+.card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.text-muted {
+  color: var(--gray-text);
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive container spacing */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Utility Classes */
+.rounded-xl {
+  border-radius: var(--border-radius) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
